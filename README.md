@@ -9,20 +9,20 @@ You will need a new Slack bot token to start your bot. Then, use [Gynoid](https:
 To install with Gynoid:
 
 ```
-register concierge using {slack-token}
+register jarvis using {slack-token}
 ```
 
 This will start your bot in Slack. Now, extend its functionality by running this command:
 
 ```
-extend concierge from cabralmartin/jarvis-droid
+extend jarvis from cabralmartin/jarvis-droid
 ```
 
 Done!
 
-## Using Concierge
+## Using J.A.R.V.I.S
 
-Invite your Concierge bot to a channel. Then you can mention the bot to execute commands.
+You can either DM J.A.R.V.I.S or invite him to a channel.
 
 ### Asking things
 
