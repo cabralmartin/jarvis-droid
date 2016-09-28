@@ -4,19 +4,11 @@
   "actions": [
     {
       "function": "help",
-      "aliases": ["help", "help me", "what can you do?"],
-      "acls": {
-        "dm": true,
-        "mention": true
-      }
+      "aliases": ["help", "help me", "what can you do?"]
     },
     {
       "function": "whoIs",
       "aliases": ["who :name([^\\s]+)", "who is :name([^\\s]+)", "who\\?"],
-      "acls": {
-        "dm": true,
-        "mention": true
-      },
       "premessage": "_Let me see.._"
     }
   ]
