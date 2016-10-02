@@ -1,0 +1,8 @@
+{
+	"@luciano": {
+    "name": "Luciano B.",
+		"cask": "Mobile Developer",
+		"crew": "Crew Brucke",
+		"projects": ["auth0/Lock.Android", "auth0/Auth0.Android"]
+	}
+}

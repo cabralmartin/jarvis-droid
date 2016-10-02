@@ -1,12 +1,18 @@
 var fs = require('fs');
 var dirname = require('path').dirname;
+var users = require('users_data');
 
 module.exports = function(context) {
   return {
     whoIs: function(req, res) {
-      try {
+      var name = formatName(req.params.name);
+      var message = "User not found.";
+      if (users[name]){
+        message = describeUser(users[name]);
+      }
 
-        return res.text('I\'m still new here..').send();
+      try {
+        return res.text(message).send();
       } catch (e) {
         return res.text('Something\'s wrong.. I cannot answer you right now.\n```' + JSON.stringify(e) + '```').send();
       }
@@ -17,3 +23,21 @@ module.exports = function(context) {
     }
   };
 };
+
+function formatName(name){
+  if (name && name.charAt(0) !== '@') {
+    name = '@' + name;
+  }
+  return name.toLowerCase();
+}
+
+function describeUser(user){
+  return mdBold(user.name) + "\n" +
+    mdBold("Cask: ") + user.cask + "\n" +
+    mdBold("Crew: ") + user.crew + "\n" +
+    mdBold("Projects: ") + user.projects;
+}
+
+function mdBold(text){
+  return "**" + text + "**";
+}
