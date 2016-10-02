@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cabralmartin/jarvis-droid/issues"
   },
-  "homepage": "https://github.com/cabralmartin/jarvis-droid#readme"
+  "homepage": "https://github.com/cabralmartin/jarvis-droid#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
 }

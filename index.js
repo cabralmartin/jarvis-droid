@@ -1,6 +1,7 @@
 var fs = require('fs');
 var dirname = require('path').dirname;
 var users = require('users_data');
+var _ = require('underscore');
 
 module.exports = function(context) {
   return {
@@ -38,6 +39,17 @@ function describeUser(user){
     mdBold("Projects: ") + user.projects;
 }
 
+function describeCodeArray(array){
+  return _.map(array, function(item){
+    return mdCode(item);
+  });
+}
+
+// MarkDown Format Helper Functions
 function mdBold(text){
   return "**" + text + "**";
+}
+
+function mdCode(text){
+  return "`" + text + "`";
 }
